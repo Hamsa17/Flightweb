@@ -1,0 +1,62 @@
+<!--
+* File Name: login.html
+* Description: This html page contains layout of flight portal web application and it contains all the scripts, css pages .
+* Copyright (c) 2019: Tata Elxsi
+* Authors: Hamsalekha U.V
+* Creation Date: 07/02/2020
+* MODIFICATION RECORD:
+*
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sign in and Registration form design</title>
+  <link rel="stylesheet" type="text/css" href="/css/login.css" />
+  <!--linking css file-->
+  <script src="js/lib/jquery-3.2.1.min.js"></script>
+  <!--jquery library-->
+  <script src="js/login.js"></script>
+  <!--linking js file-->
+</head>
+
+<body>
+  <h1>Airlines</h1>
+  <section class="header">
+    <div class="container">
+      <img class="logo" src="../Images/logo1.jpg" alt="My_Logo" width="300px" height="300px">
+      <!--inserting logo-->
+    </div>
+  </section>
+  <div class="login-page">
+    <div class="form">
+      <div id="error">
+        <!--creating register form -->
+        <form name="Reg-form" class="register-form" action="searchflight.html" onsubmit="return validateRegister()">
+          <input id="fname" type="text" placeholder="Firstname" autocomplete="off" required /><br>
+          <input id="email" type="mail" placeholder="Emailid" autocomplete="off" />
+          <div id="emailError">**Please enter your email</div>
+          <input id="phone" type="phone" placeholder="Phonenumber" autocomplete="off" required />
+          <input id="pass1" type="password" placeholder="Password" />
+          <div id="pass1Error">**Enter the Password.</div>
+          <input id="pass2" type="password" placeholder="Confirm password" />
+          <div id="pass2Error">**Please check that you've entered and confirmed your password</div>
+          <button onclick="validateRegister()" type="Create">create</button>
+          <p class="message">Already registered?<a href="#">login</a>
+          </p>
+        </form>
+        <!--creating login form-->
+        <form name="form" class="login-form" onsubmit="return validatelogin()">
+          <input id="username" type="text" placeholder="Username" autocomplete="off" required />
+          <input id="password" type="password" placeholder="Password" name="password" />
+          <div id="passError">**Enter the password</div>
+          <button type="submit">Login</button>
+          <p class="message">Not Registered?<a href="#">Register</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
